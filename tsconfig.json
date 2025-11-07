@@ -3,7 +3,6 @@
     "target": "ES2020",
     "module": "commonjs",
     "outDir": "./build",
-    "rootDir": "./",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
@@ -11,5 +10,5 @@
     "types": ["jest", "node"]
   },
   "include": ["src/**/*", "demo/**/*"],
-  "exclude": ["node_modules", "build"]
+  "exclude": ["node_modules", "build", "**/*.test.ts"]
 }
