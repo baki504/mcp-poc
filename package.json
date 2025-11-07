@@ -3,10 +3,9 @@
   "version": "1.0.0",
   "description": "mcp poc project",
   "scripts": {
-    "build": "tsc",
+    "setup": "tsc && node build/setupMcp.js",
     "test": "jest",
-    "lint": "eslint \"**/*.ts\"",
-    "replace": "tsc src/replace.ts --outDir build && node build/replace.js"
+    "lint": "eslint \"**/*.ts\""
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.21.0",
