@@ -14,11 +14,17 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
+    "@types/jest": "^29.5.14",
     "@types/node": "^24.10.0",
     "eslint": "^9.39.1",
     "globals": "^16.5.0",
     "jest": "^30.2.0",
+    "ts-jest": "^29.1.0",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.46.3"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node"
   }
 }
