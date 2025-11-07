@@ -1,24 +1,13 @@
 {
   "name": "mcp-poc",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "mcp poc project",
   "scripts": {
     "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint \"**/*.ts\""
+    "test": "jest",
+    "lint": "eslint \"**/*.ts\"",
+    "replace": "tsc src/replace.ts --outDir build && node build/replace.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/baki504/mcp-poc.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/baki504/mcp-poc/issues"
-  },
-  "homepage": "https://github.com/baki504/mcp-poc#readme",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.21.0",
     "zod": "^3.25.76"
@@ -28,6 +17,7 @@
     "@types/node": "^24.10.0",
     "eslint": "^9.39.1",
     "globals": "^16.5.0",
+    "jest": "^30.2.0",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.46.3"
   }
