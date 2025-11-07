@@ -5,11 +5,11 @@
   "mcpServers": {
     "mcp-poc": {
       "command": "/Users/yu.takada/.nvm/versions/node/v22.19.0/bin/node",
-      "disabled": false,
-      "timeout": 60000,
       "args": [
         "/Users/yu.takada/dev/gitrepo/mcp-poc/build/index.js"
-      ]
+      ],
+      "timeout": 60000,
+      "disabled": false
     }
   },
   "tools": [
@@ -26,7 +26,9 @@
     "report_issue",
     "use_aws",
     "execute_bash",
-    "fs_write"
+    "fs_write",
+    "@mcp-poc/run_test",
+    "@mcp-poc/run_lint"
   ],
   "toolsSettings": {
     "use_aws": {
