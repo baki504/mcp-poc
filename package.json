@@ -4,11 +4,13 @@
   "description": "mcp poc project",
   "scripts": {
     "setup": "tsc && node build/setupMcp.js",
+    "format": "prettier --write src/**/*.ts",
     "test": "jest",
     "lint": "eslint \"**/*.ts\""
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.21.0",
+    "prettier": "^3.6.2",
     "zod": "^3.25.76"
   },
   "devDependencies": {

@@ -28,7 +28,8 @@
     "execute_bash",
     "fs_write",
     "@mcp-poc/run_test",
-    "@mcp-poc/run_lint"
+    "@mcp-poc/run_lint",
+    "@mcp-poc/run_format"
   ],
   "toolsSettings": {
     "use_aws": {

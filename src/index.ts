@@ -44,7 +44,7 @@ server.tool(
         ],
       };
     }
-  }
+  },
 );
 
 server.tool(
@@ -76,7 +76,39 @@ server.tool(
         ],
       };
     }
-  }
+  },
+);
+
+server.tool(
+  "run_format",
+  "Execute npm run format command",
+  {
+    cwd: z.string().optional().describe("Working directory (optional)"),
+  },
+  async ({ cwd }) => {
+    try {
+      const options = cwd ? { cwd } : {};
+      const { stdout, stderr } = await execAsync("npm run format", options);
+      const output = stdout + (stderr ? `\nSTDERR: ${stderr}` : "");
+      return {
+        content: [
+          {
+            type: "text",
+            text: output || "(no output)",
+          },
+        ],
+      };
+    } catch (error) {
+      return {
+        content: [
+          {
+            type: "text",
+            text: `Error: ${error}`,
+          },
+        ],
+      };
+    }
+  },
 );
 
 async function main() {
